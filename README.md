@@ -21,11 +21,11 @@ Citect Historian Tag Property Name | Wonderware Historian Tag Property Name
 TagName | TagName
 Datatype | TagType
 Properties | Description
-Eng_Full | MaxEU
-Eng_Units | EUKey
 Eng_Zero | MinEU
-Raw_Full | MaxRaw
+Eng_Full | MaxEU
 Raw_Zero | MinRaw
+Raw_Full | MaxRaw
+Eng_Units | EUKey
 
 ## Citect ProcessData migration
 Using the SQL script, the process data for Numeric Samples, Digital Samples & String Samples is migrated to Wonderware Historian.
