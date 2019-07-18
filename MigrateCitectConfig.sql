@@ -132,8 +132,8 @@ DECLARE     @DataSource NVARCHAR(256)
 DECLARE     @Location NVARCHAR(256)
 DECLARE     @Description NVARCHAR(256)
 DECLARE		@EUKey INT = 0
-DECLARE     @MaxEu NVARCHAR(256)
-DECLARE     @MinEu NVARCHAR(256)
+DECLARE     @MaxEU NVARCHAR(256)
+DECLARE     @MinEU NVARCHAR(256)
 DECLARE     @EngineeringUnits NVARCHAR(256)
 DECLARE     @ValueDeaband NVARCHAR(256)
 DECLARE     @MinRaw NVARCHAR(256)
@@ -160,10 +160,10 @@ BEGIN
 			@DataSourceID = DatasourceID, 
 			@DataTypeID = DataTypeID,
 			@Location = Location, 
-			@MaxEu = Eng_Full, 
-			@MinEu = Eng_Zero, 
+			@MaxEU = Eng_Full, 
+			@MinEU = Eng_Zero, 
 			@EngineeringUnits = Eng_Units, 
-			@ValueDeaband = LoggingDeadband,
+			@ValueDeaband = LoggingDeadBand,
 			@MinRaw = Raw_Zero, @MaxRaw = Raw_Full
 	FROM #CitectConfig 
 	WHERE ID = @TagID   
@@ -187,16 +187,16 @@ BEGIN
 	WHERE Unit = @EngineeringUnits
 
 	DECLARE @MnEU AS FLOAT(53) 
-	SET @MnEU = CONVERT(FLOAT, @MinEu)
+	SET @MnEU = CONVERT(FLOAT, @MinEU)
 
 	DECLARE @MxEU AS FLOAT(53) 
 	SET @MxEU = CONVERT(FLOAT, @MaxEU)
 
-	DECLARE @MnRAW AS FLOAT(53) 
-	SET @MnRAW = CONVERT(FLOAT, @MinRAW)
+	DECLARE @MnRaw AS FLOAT(53) 
+	SET @MnRaw = CONVERT(FLOAT, @MinRaw)
 
-	DECLARE @MxRAW AS FLOAT(53) 
-	SET @MxRAW = CONVERT(FLOAT, @MaxRAW)
+	DECLARE @MxRaw AS FLOAT(53) 
+	SET @MxRaw = CONVERT(FLOAT, @MaxRaw)
 
 	DECLARE @VDeaband AS FLOAT(53) 
 	SET @VDeaband = CONVERT(FLOAT, @ValueDeaband)

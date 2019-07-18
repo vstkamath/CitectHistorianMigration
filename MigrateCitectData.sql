@@ -77,10 +77,11 @@ BEGIN
 	DECLARE @OneDayOffset BIGINT;
 	DECLARE @TimeZone VARCHAR(50)
 	
-	EXEC master.dbo.XP_Regread  'HKEY_LOCAL_MACHINE',
-								'SYSTEM\CurrentControlSet\Control\TimeZoneInformation',
-								'TimeZoneKeyName',
-								@TimeZone OUT
+	EXEC master..xp_regread 
+					'HKEY_LOCAL_MACHINE',
+					'SYSTEM\CurrentControlSet\Control\TimeZoneInformation',
+					'TimeZoneKeyName',
+					@TimeZone OUT
 
 	IF NOT EXISTS (
 		SELECT 1
