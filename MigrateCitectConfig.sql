@@ -23,8 +23,6 @@ Usage
 
 -----
 
-
-
 	exec MigrateCitectConfig
 
 
@@ -62,24 +60,10 @@ The latest version of this script is available at:
 
 
 
-Modified: 20-Jun-2019
-
-By:		  RajkumarK
-
-
-
-*/
-
-
+Modified: 20-Jun-2019*/
 
 /*
-
 -- The following queries are useful for checking whether the data got migrated properly
-
-
-
-
-
 */
 
 
