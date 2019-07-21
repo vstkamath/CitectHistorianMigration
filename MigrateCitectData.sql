@@ -55,7 +55,6 @@ The latest version of this script is available at:
 
 Modified: 20-Jun-2019
 
-By:		  AVEVA Software, LLC.
 
 */
 
